@@ -45,6 +45,10 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'nvim-tree/nvim-tree.lua'
 
+Plug 'github/copilot.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " ---
@@ -88,7 +92,6 @@ lua << EOF
 require("nvim-tree").setup({
   disable_netrw = true,
   hijack_netrw = true,
-  ignore_ft_on_setup = {},
   open_on_tab = false,
   hijack_cursor = true,
   update_cwd = true,
@@ -104,10 +107,6 @@ require("nvim-tree").setup({
   view = {
     width = 30,
     side = "left",
-    mappings = {
-      custom_only = false,
-      list = {},
-    },
   },
 })
 EOF
